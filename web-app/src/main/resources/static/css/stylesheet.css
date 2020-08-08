@@ -1,0 +1,70 @@
+/*==== Overall ====*/
+body{
+	background-color: #F7F9FB;
+	margin: 5px;
+	color: #373737;
+	font-family: "Times New Roman", Times, serif; 
+	border: 1px solid grey;
+}
+
+/*==== Top Bar Navigation Menu/Logo ====*/
+.headerMenu{
+  border-bottom: 1px solid grey;
+}
+
+.headerMenu div ul li a{
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/*==== Search Page Search Form ====*/
+form.search input[type=text] {
+  background: #f1f1f1;
+	font-size: 1em;
+	padding: 12px;
+	border: 1px solid grey;
+  width: 60%;
+}
+
+form.search button {
+  background: #1a95fa;
+  color: #F7F9FB;
+  width: 20%;
+  height: 2.6em;
+  padding: 12px;
+  font-size: 1em;
+  border: 1px solid grey;
+  cursor: pointer;
+}
+
+/*==== Review Page Review Form ====*/
+form.review button{
+  background: #1a95fa;
+  color: #F7F9FB;
+	width: 30%;
+  padding: 12px;
+  font-size: 1em;
+  border: 1px solid grey;
+  cursor: pointer;
+}
+
+form.review button:hover {
+	background-color: #1269af
+}
+
+/*==== Body Content ====*/
+.messageBody{
+  font-size: 1.5em;
+  padding: 1em;
+}
+
+/*==== Bottom Footer ====*/
+.footer{
+	background-color: #F7F9FB;
+	color: #373737;
+	padding: .25em;
+	clear: both;
+  text-align: center;
+  font-size: 1.5em;
+	border-top: 1px solid grey;
+}

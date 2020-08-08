@@ -1,0 +1,60 @@
+<!DOCTYPE html> <!-- HTML5 Doctype -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3"> <!-- Set language type -->
+  
+  <head th:replace="/fragments/headder">
+    <title>Search</title>
+  </head>
+
+	<body>
+    <!-- Top Bar Navigation Menu/Logo -->
+    <nav th:replace="/fragments/navigation"></nav>
+    
+    <!-- Body Content -->
+		<div class="messageBody">			
+				<div class="col-12">
+					<div class="content">					
+            
+            <!-- Body Writing-->
+            <h2><u>Search for Workshops</u></h2>
+            <p>To find our upcoming online schedule, please enter the <u><b>month</b></u> of this year your looking at joining one of our online workshops.</p>
+
+            <!-- Search Form -->
+            <form class="search" action="#">
+              <input type="text" placeholder="E.g. January, Febuary etc." name="search">          
+              <button type="submit">
+                  <i class="fa fa-search">Search</i>
+              </button>
+            </form>
+            
+            <!-- Call Results
+            <div th:if"${!workshop.empty}">
+              <p>There are pages</p>
+                <tr>
+                  <th>Day</th>
+                  <th>Month</th>
+                  <th>Grade</th>
+                  <th>Price</th>
+                </tr>
+                <tr th:each="workshop: ${workshop}">
+                  <td th:text="${workshop.Day}"></td>
+                  <td th:text="${workshop.Month}"></td>
+                  <td th:text="${workshop.Grade}"></td>
+                  <td th:text="${workshop.Price}"></td>                                    
+                </tr>
+            </div>
+
+            <div th:unless"${!workshop.empty}">
+              <p>There are No pages</p>
+            </div>
+            -->
+
+					</div>
+				</div>
+			</div>
+		</div>
+    
+    <!-- Footer -->
+    <footer th:replace="/fragments/footer"></footer>
+
+	</body>	
+</html>

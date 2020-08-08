@@ -1,0 +1,32 @@
+<!DOCTYPE html> <!-- HTML5 Doctype -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3"> <!-- Set language type -->
+  
+  <head th:replace="/fragments/headder">
+    <title>Home</title>
+  </head>
+	
+	<body>
+    <!-- Top Bar Navigation Menu/Logo -->
+    <nav th:replace="/fragments/navigation"></nav>
+    
+    <!-- Body Content -->
+		<div class="messageBody">			
+				<div class="col-12">
+					<div class="content">					
+
+						<h2><u>Welcome to the Free Bird Studio Web App!</u></h2>
+            <p>We are Irelands largest fastest growing art studio specialising in workshops catering for beginners, intermidate and advanced groups of all skills.</p>
+            <p>Here you can find news, information regarding upcoming workshops, reviews and contact information.</p>
+            <p>Due to Covid-19 we have moved our workshops online. To see if there is a workshop coming up you would like to join, please look on our search page <a th:href="@{/search}">here</a>.</p>
+            <p>To contact us directly, you can find the details on our contact page located <a th:href="@{/contact}">here</a>.</p>
+            
+					</div>
+				</div>
+			</div>
+		</div>
+
+    <!-- Footer -->
+    <footer th:replace="/fragments/footer"></footer>
+		
+	</body>	
+</html>

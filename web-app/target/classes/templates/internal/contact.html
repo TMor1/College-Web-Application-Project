@@ -1,0 +1,31 @@
+<!DOCTYPE html> <!-- HTML5 Doctype -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3"> <!-- Set language type -->
+  
+  <head th:replace="/fragments/headder">
+    <title>Contact</title>
+  </head>
+
+	<body>
+    <!-- Top Bar Navigation Menu/Logo -->
+    <nav th:replace="/fragments/navigation"></nav>
+    
+    <!-- Body Content -->
+		<div class="messageBody">			
+				<div class="col-12">
+					<div class="content">					
+            
+            <h2><u>Contact Information</u></h2>
+            <p>Address: 123 Example Lane, Drumcondra, Co.Dublin</p>
+            <p>Email: freebirdstudio@example.ie</p>
+            <p>Telephone: (01) 123 1234</p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+    
+    <!-- Footer -->
+    <footer th:replace="/fragments/footer"></footer>
+
+	</body>	
+</html>

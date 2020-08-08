@@ -1,0 +1,51 @@
+/*==== Login Page CSS ====*/
+body{
+	background-color: #F7F9FB;
+	margin: 20px;
+	color: #373737;
+	font-family: "Times New Roman", Times, serif; 
+	border: 1px solid grey;
+}
+
+.header-container{
+  text-align: center;
+}
+
+.login-container{
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.login-bottom-container{
+	text-align: center;
+	font-size: 1em;
+}
+
+.header-container input [type="text"]{
+	width: 80%;
+}
+
+.login-container button{
+	background: #1a95fa;
+	color: #F7F9FB;
+	width: 25%;
+	padding: 12px;
+	font-size: 1em;
+	border: 1px solid grey;
+	cursor: pointer;
+}
+
+.login-container button:hover {
+	background-color: #1269af
+}
+
+/*==== Bottom Footer ====*/
+.footer{
+	background-color: #F7F9FB;
+	color: #373737;
+	padding: .25em;
+	clear: both;
+  text-align: center;
+  font-size: 1.5em;
+	border-top: 1px solid grey;
+}

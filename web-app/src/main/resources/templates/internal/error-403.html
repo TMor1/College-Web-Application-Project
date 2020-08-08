@@ -1,0 +1,29 @@
+<!DOCTYPE html> <!-- HTML5 Doctype -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3"> <!-- Set language type -->
+  
+  <head th:replace="/fragments/headder">
+    <title>Permission Denied</title>
+  </head>
+	
+	<body>
+    <!-- Top Bar Navigation Menu/Logo -->
+    <nav th:replace="/fragments/errorNavigation"></nav>
+    
+    <!-- Body Content -->
+		<div class="messageBody">			
+				<div class="col-12">
+					<div class="content">					
+
+						<h2><u>Permission Denied</u></h2>
+            <p>You do not have permission to access this page, please click <a th:href="@{/}">here</a> to return to the homepage.</p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+    <!-- Footer -->
+    <footer th:replace="/fragments/footer"></footer>
+		
+	</body>	
+</html>

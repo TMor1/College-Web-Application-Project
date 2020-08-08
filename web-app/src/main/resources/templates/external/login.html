@@ -1,0 +1,68 @@
+<!DOCTYPE html> <!-- HTML5 Doctype -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3"> <!-- Set language type -->
+
+  <head th:replace="/fragments/extHeadder">
+    <title>Login</title>
+  </head>
+
+  <body>
+    <div class="col-12">      
+      <!-- Form Page -->
+      <form th:action="@{/login}" method="post">
+        <div class="header-container">
+
+          <!-- Site Icon Logo -->
+          <img src="https://img.icons8.com/plasticine/100/000000/bird.png" width="120em" length="120em"/>
+          
+          <!-- Login Headder -->
+          <h2><u>Free Bird Studio</u></h2>
+          <h2><u>Login Page</u></h2>
+          <br><br>
+        </div>
+
+        <!-- Beginning of Login Form -->
+        <div class="login-container">
+          <form th:action="@{/login}" method="post">
+           
+              <!-- Error Response: Invalid Credentials -->
+              <div th:if="${param.error}" class="alert alert-error">Invalid email address or password.</div>
+              
+              <!-- Logout Response: Success -->
+              <div th:if="${param.logout}" class="alert alert-success">You have logged out of your account.</div>
+
+              <!-- Email -->
+              <label for="user">
+                <b>Email Address:</b>
+              </label><br>
+              <input type="text" placeholder="Enter Email Here" name="username" autofocus required><br><br>
+
+              <!-- Password -->
+              <label for="password">
+                <b>Password:</b>
+              </label><br>
+              <input type="password" placeholder="Enter Password Here" name="password" autofocus required><br><br>
+
+              <!-- 2FA Code -->
+              <!-- 
+                #### Implement In a Future Version
+              <label for="2FA">
+                <b>Optional 2FA Code:</b>
+              </label><br>
+              <input type="text" placeholder="Enter 2FA Code Here" name="2FA" autofocus><br><br>
+              -->
+
+              <!-- Submit Button -->
+              <button type="submit">Login</button><br><br>
+
+              <!-- Link to Registration Page -->
+              <p>Don't have an account?<br><a th:href="@{/register}">Register here.</a></p>
+
+          </form>
+        </div>
+
+        <!-- Footer -->
+        <footer th:replace="/fragments/footer"></footer>	
+      </form>  
+    </div>    
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html> <!-- HTML5 Doctype -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3"> <!-- Set language type -->
+
+  <head th:replace="/fragments/extHeadder">
+    <title>Register</title>
+  </head>
+
+  <body>
+    <div class="col-12"> 
+
+        <div class="header-container">
+          <!-- Site Icon Logo -->
+          <img src="https://img.icons8.com/plasticine/100/000000/bird.png" width="120em" length="120em"/>
+          
+          <!-- Login Headder -->
+          <h2><u>Free Bird Studio</u></h2>
+          <h2><u>Registration Page</u></h2>
+          <br><br>
+        </div>
+
+        <!-- Form Success Message -->
+        <div th:if="${param.successful}">
+          <div class="alert alert-success">You have registered an account.</div>
+        </div>
+
+        <!-- Form Failure Message -->
+        <div th:if="${param.failure}">
+          <div class="alert alert-error">Please try again.</div>
+        </div>
+        
+        <!-- Beginning of Register Form -->
+        <div class="login-container">
+
+        <!-- Form Page -->
+        <form th:action="@{/register}" method="post" th:object="${Users}">
+                    
+          <!-- First Name -->
+          <label for="firstName">
+            <b>First Name:</b>
+          </label><br>
+          <input th:field="*{firstName}" type="text" placeholder="Enter First Name Here" autofocus required><br><br>
+
+          <!-- Last Name -->
+          <label for="lastName">
+            <b>Last Name:</b>
+          </label><br>
+          <input th:field="*{lastName}" type="text" placeholder="Enter Last Name Here" autofocus required><br><br>
+
+          <!-- Email -->
+          <label for="emailAddress">
+            <b>Email:</b>
+          </label><br>
+          <input th:field="*{emailAddress}" type="email" placeholder="Enter Email Here" autofocus required><br><br>
+
+          <!-- Password -->
+          <label for="password">
+            <b>Password:</b>
+          </label><br>
+          <input th:field="*{password}" type="password" placeholder="Enter Password Here" minlength="8" autofocus required><br><br>
+
+          <!-- Confirm Password 
+
+            #### Implement In a Future Version
+          
+          <label for="password">
+            <b>Confirm Password:</b>
+          </label><br>
+             B/C of Error: Taken out from beside input: th:field="password" 
+          <input type="password" placeholder="Enter Password Here" id="confirmPassword" autofocus required><br><br>
+          -->
+
+          <!-- Submit Button -->
+          <button type="submit">Register</button><br><br>
+
+          <!-- Link to Registration Page -->
+          <p>Already have an account?<br><a th:href="@{/login}">Login here.</a></p>
+        </div>
+      </form> 
+
+      <!-- Footer -->
+      <footer th:replace="/fragments/footer"></footer>
+    </div>    
+  </body>
+</html>
